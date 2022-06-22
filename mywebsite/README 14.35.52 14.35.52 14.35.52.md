@@ -49,5 +49,4 @@ npm test
 ```
 
 ## More
-
 You can view full project on my [github](https://github.com/shinonomeee/UserCenter) or my [gitee](https://gitee.com/shinome/UserCenter).
