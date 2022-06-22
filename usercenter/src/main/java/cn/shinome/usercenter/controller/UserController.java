@@ -60,6 +60,19 @@ public class UserController {
         return userService.userLogin(userAccount, userPassword, request);
     }
 
+    @GetMapping("/current")
+    public User getCurrentUser(HttpServletRequest request) {
+        User currUser = (User) request.getSession().getAttribute(USER_LOGIN_STATE);
+        if (currUser == null) {
+            return null;
+        }
+        // 如果不变的话可以直接返回用户信息，如果频繁变化的话需要查表
+        long userId = currUser.getId();
+        // todo 校验用户登录是否合法
+        User user = userService.getById(userId);
+        return userService.getHandledUser(user);
+    }
+
     @GetMapping("/search")
     public List<User> searchUsers(String username, HttpServletRequest request) {
         if (!isAdmin(request)) {

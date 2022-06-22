@@ -133,6 +133,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
     @Override
     public User getHandledUser(User originalUser) {
+        if (originalUser == null) {
+            return null;
+        }
         User handledUser = new User();
         handledUser.setId(originalUser.getId());
         handledUser.setUsername(originalUser.getUsername());
