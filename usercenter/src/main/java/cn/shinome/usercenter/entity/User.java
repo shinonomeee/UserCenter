@@ -1,4 +1,4 @@
-package cn.shinome.usercenter.model.domain;
+package cn.shinome.usercenter.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;

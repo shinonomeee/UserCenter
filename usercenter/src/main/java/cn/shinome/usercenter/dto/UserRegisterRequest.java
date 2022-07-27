@@ -1,16 +1,16 @@
-package cn.shinome.usercenter.model.domain.request;
+package cn.shinome.usercenter.dto;
 
 import lombok.Data;
 
 import java.io.Serializable;
 
 /**
- * @Description 用户登陆请求体
+ * @Description 用户注册请求体
  * @Author chris
- * @Date 2022/4/29, 15:46
+ * @Date 2022/4/29, 15:21
  */
 @Data
-public class UserLoginRequest implements Serializable {
+public class UserRegisterRequest implements Serializable {
 
     private static final long serialVersionUID = 1508881324594323360L;
 
@@ -24,4 +24,8 @@ public class UserLoginRequest implements Serializable {
      */
     String userPassword;
 
+    /**
+     * 校验密码
+     */
+    String checkPassword;
 }

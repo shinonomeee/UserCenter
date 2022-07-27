@@ -1,10 +1,9 @@
 package cn.shinome.usercenter.controller;
 
-import cn.shinome.usercenter.model.domain.User;
-import cn.shinome.usercenter.model.domain.request.UserLoginRequest;
-import cn.shinome.usercenter.model.domain.request.UserRegisterRequest;
+import cn.shinome.usercenter.entity.User;
+import cn.shinome.usercenter.dto.UserLoginRequest;
+import cn.shinome.usercenter.dto.UserRegisterRequest;
 import cn.shinome.usercenter.service.UserService;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +11,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static cn.shinome.usercenter.constant.UserConstant.ADMIN_ROLE;
 import static cn.shinome.usercenter.constant.UserConstant.USER_LOGIN_STATE;

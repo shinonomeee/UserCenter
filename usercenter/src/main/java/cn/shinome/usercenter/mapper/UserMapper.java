@@ -1,6 +1,6 @@
 package cn.shinome.usercenter.mapper;
 
-import cn.shinome.usercenter.model.domain.User;
+import cn.shinome.usercenter.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

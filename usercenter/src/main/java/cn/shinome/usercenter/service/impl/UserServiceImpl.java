@@ -3,7 +3,7 @@ package cn.shinome.usercenter.service.impl;
 import cn.shinome.usercenter.service.UserService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import cn.shinome.usercenter.model.domain.User;
+import cn.shinome.usercenter.entity.User;
 import cn.shinome.usercenter.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

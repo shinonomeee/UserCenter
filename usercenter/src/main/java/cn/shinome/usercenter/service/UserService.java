@@ -1,6 +1,6 @@
 package cn.shinome.usercenter.service;
 
-import cn.shinome.usercenter.model.domain.User;
+import cn.shinome.usercenter.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import javax.servlet.http.HttpServletRequest;
