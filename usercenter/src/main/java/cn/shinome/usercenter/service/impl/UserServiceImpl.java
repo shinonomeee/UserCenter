@@ -19,6 +19,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static cn.shinome.usercenter.constant.GlobalSecretConstants.SALT;
+import static cn.shinome.usercenter.constant.UserConstant.DEFAULT_AVATAR;
 import static cn.shinome.usercenter.constant.UserConstant.USER_LOGIN_STATE;
 
 /**
@@ -73,6 +74,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         User newUser = new User();
         newUser.setUserAccount(userAccount);
         newUser.setUserPassword(qualifiedPassword);
+        newUser.setAvatarUrl(DEFAULT_AVATAR);
         boolean saveResult = this.save(newUser);
         if (!saveResult) {
             return -1;

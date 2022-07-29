@@ -8,6 +8,11 @@ package cn.shinome.usercenter.constant;
 public interface UserConstant {
 
     /**
+     * 默认头像
+     */
+    String DEFAULT_AVATAR = "https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/7246/defaultAvatar.jpg";
+
+    /**
      * 用户登陆态键
      */
     String USER_LOGIN_STATE = "userLoginState";

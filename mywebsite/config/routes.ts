@@ -16,7 +16,6 @@ export default [
     access: 'canAdmin',
     component: './Admin',  // 公共组件
     routes: [
-      { path: '/admin/sub-page', name: '二级管理页', icon: 'smile', component: './Welcome' },
       { path: '/admin/user-manage', name: '用户管理页', icon: 'smile', component: './Admin/UserManage' },
       { component: './404' },
     ],
