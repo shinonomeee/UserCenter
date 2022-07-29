@@ -34,6 +34,15 @@ public interface UserService extends IService<User> {
     User userLogin(String userAccount, String userPassword, HttpServletRequest request);
 
     /**
+     * 用户注销接口
+     *
+     * @param request 请求
+     * @return 注销成功/失败标识
+     * @Author chris
+     */
+    int userLogout(HttpServletRequest request);
+
+    /**
      * 为用户信息脱敏
      * @param originalUser 未脱敏的 User
      * @return 脱敏后的 User
@@ -49,4 +58,6 @@ public interface UserService extends IService<User> {
      * @Author chris
      */
     List<User> searchUsers(String username, HttpServletRequest request);
+
+
 }

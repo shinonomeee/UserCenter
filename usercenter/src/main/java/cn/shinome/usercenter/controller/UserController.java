@@ -58,6 +58,16 @@ public class UserController {
         return userService.userLogin(userAccount, userPassword, request);
     }
 
+    @PostMapping("/logout")
+    public Integer userLogout(HttpServletRequest request) {
+        // Controller 层倾向于对请求参数本身的校验，不涉及业务逻辑本身 (越少越好)。
+        // Service 层是对业务逻辑的校验，可能会被 controller 之外的类调用。
+        if (request == null) {
+            return null;
+        }
+        return userService.userLogout(request);
+    }
+
     @GetMapping("/current")
     public User getCurrentUser(HttpServletRequest request) {
         User currUser = (User) request.getSession().getAttribute(USER_LOGIN_STATE);

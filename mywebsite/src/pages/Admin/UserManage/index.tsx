@@ -16,7 +16,7 @@ const columns: ProColumns<API.CurrentUser>[] = [
     copyable: true,   // 是否允许复制
   },
   {
-    title: '账户名',
+    title: '账号',
     dataIndex: 'userAccount',
     copyable: true,
   },
@@ -40,6 +40,14 @@ const columns: ProColumns<API.CurrentUser>[] = [
   {
     title: '性别',
     dataIndex: 'gender',
+    valueType: 'select',
+    valueEnum: {
+      0: {text: '男',
+      },
+      1: {
+        text: '女',
+      },
+    },
   },
   {
     title: '电话',
@@ -54,13 +62,25 @@ const columns: ProColumns<API.CurrentUser>[] = [
   {
     title: '用户状态',
     dataIndex: 'userStatus',
+    valueType: 'select',
+    valueEnum: {
+      0: {text: '正常',
+        status: 'Success',
+      },
+      1: {
+        text: '异常',
+        status: 'Error',
+      },
+    },
   },
   {
     title: '用户角色',
     dataIndex: 'userRole',
     valueType: 'select',
     valueEnum: {
-      0: {text: '普通用户', status: 'Default'},
+      0: {text: '普通用户',
+        status: 'Default',
+      },
       1: {
         text: '管理员',
         status: 'Success',
