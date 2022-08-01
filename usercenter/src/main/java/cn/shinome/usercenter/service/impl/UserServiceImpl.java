@@ -71,10 +71,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         // 2. 加密
         String qualifiedPassword = DigestUtils.md5DigestAsHex((SALT + userPassword).getBytes(StandardCharsets.UTF_8));
         // 3. 插入数据
-        User newUser = new User();
+        User newUser = getDefaultUser();
         newUser.setUserAccount(userAccount);
         newUser.setUserPassword(qualifiedPassword);
-        newUser.setAvatarUrl(DEFAULT_AVATAR);
         boolean saveResult = this.save(newUser);
         if (!saveResult) {
             return -1;
@@ -138,6 +137,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         // 移除登陆态
         request.getSession().removeAttribute(USER_LOGIN_STATE);
         return 1;
+    }
+
+    @Override
+    public User getDefaultUser() {
+        User defaultUser = new User();
+        defaultUser.setGender(2);
+        defaultUser.setAvatarUrl(DEFAULT_AVATAR);
+        defaultUser.setUserRole(0);
+        defaultUser.setUserStatus(0);
+        return defaultUser;
     }
 
     @Override

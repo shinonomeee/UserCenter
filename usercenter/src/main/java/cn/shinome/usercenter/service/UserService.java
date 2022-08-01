@@ -43,6 +43,13 @@ public interface UserService extends IService<User> {
     int userLogout(HttpServletRequest request);
 
     /**
+     * 初始化用户
+     * @return 默认的初始用户
+     * @Author chris
+     */
+    User getDefaultUser();
+
+    /**
      * 为用户信息脱敏
      * @param originalUser 未脱敏的 User
      * @return 脱敏后的 User
