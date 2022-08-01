@@ -42,11 +42,16 @@ const columns: ProColumns<API.CurrentUser>[] = [
     dataIndex: 'gender',
     valueType: 'select',
     valueEnum: {
-      0: {text: '男',
+      0: {
+        text: '男',
       },
       1: {
         text: '女',
       },
+      2: {
+        text: '未设置',
+        status: 'Error',
+      }
     },
   },
   {
@@ -64,7 +69,8 @@ const columns: ProColumns<API.CurrentUser>[] = [
     dataIndex: 'userStatus',
     valueType: 'select',
     valueEnum: {
-      0: {text: '正常',
+      0: {
+        text: '正常',
         status: 'Success',
       },
       1: {
@@ -78,7 +84,8 @@ const columns: ProColumns<API.CurrentUser>[] = [
     dataIndex: 'userRole',
     valueType: 'select',
     valueEnum: {
-      0: {text: '普通用户',
+      0: {
+        text: '普通用户',
         status: 'Default',
       },
       1: {
